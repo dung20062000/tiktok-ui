@@ -7,7 +7,7 @@ import DefaultLayout from '~/components/Layout/DefaultLayout';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App" style={{ padding: 20 }}>
+      <div className="App">
         <Routes>
           {publicRoutes.map((route, index) => {
             
