@@ -20,7 +20,7 @@ const publicRoutes =[
 
 // những router sau này sử dụng cho các trang cần đăng nhập mới vào được
 const privateRoutes=[
-
+     
 ]
 
 export {publicRoutes ,privateRoutes}

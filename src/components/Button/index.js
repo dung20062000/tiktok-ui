@@ -14,7 +14,7 @@ function Button(
         small=false, 
         text = false, //nut text
         disabled = false, //khoong hien thi nut
-        rounded = false, //
+        rounded = false, // nút bo cong 
         className,
         lefIcon,
         rightIcon,
@@ -25,7 +25,7 @@ function Button(
     ) {
     let Comp = 'button'
 
-    const classess = cx('wrapper',{ primary, outline, small, large, text, disabled, rounded,[className]:className, })
+    const classess = cx('wrapper',{ primary, outline, small, large, text, disabled, rounded, [className]:className, })
     const props={
         onClick,
         ...passProps
