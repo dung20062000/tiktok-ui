@@ -9,7 +9,7 @@
   --default-layout-width: 1150px;
   --default-layout-horizontal-spacer: 24px;
   --back: #000;
-  --text-color:#333;
+  --text-color:rgba(22, 24, 35, 1);
 
 }
 *{
@@ -35,4 +35,24 @@ button, input, [tabindex]{
 a[href] {
   color: var(--text-color);
   text-decoration: none;
+}
+//custom styles tippy
+body{
+ .tippy-box{
+  background-color: rgba(84, 84, 84, 0.92);
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  }
+  .tippy-arrow{
+    color: rgba(84, 84, 84, 0.92);
+  }
+  .tippy-content{
+  padding: 8px 9px;
+  }
+  .tippy-box[data-placement^='bottom'] > .tippy-arrow::before{
+    top: -8px;
+  }
 }
