@@ -1,19 +1,16 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faCircleXmark,
   faSpinner,
-  faMagnifyingGlass,
   faEllipsisVertical,
   faEarthAsia,
   faCircleQuestion,
   faKeyboard,
-  faCloudUpload,
-  faMessage,
   faCoins,
   faGear,
   faUser,
   faSignOut,
+  faCircleXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import 'tippy.js/dist/tippy.css';
 import Tippy from '@tippyjs/react';
@@ -26,6 +23,8 @@ import styles from './Header.module.scss';
 import images from '~/assets/images/imdex.js';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { SearchIcon, UploadIcon, MessageIcon } from '~/components/icons';
+import Image from '~/components/Image';
 const cx = classNames.bind(styles);
 
 //mảng ví dụ để render ra danh sách phần tử của nút more-btn
@@ -134,14 +133,15 @@ function Header() {
             <input placeholder="Search accounts and video" spellCheck={false} />
               {/* clear xóa ô tìm kiếm */}
             <button className={cx('clear')}>
-              <FontAwesomeIcon icon={faCircleXmark} />
+            <FontAwesomeIcon icon={faCircleXmark} />
             </button>
             {/* loading icon */}
             <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
 
             <button className={cx('search-btn')}>
               {/* search icon */}
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              
+              <SearchIcon/>
             </button>
           </div>
         </HeadlessTippy>
@@ -151,13 +151,13 @@ function Header() {
           <>
             <Tippy delay={[0, 200]} content="Upload video" placement='bottom'>
               <button className={cx('acction-btn')}>
-              <FontAwesomeIcon icon={faCloudUpload} />
+                <UploadIcon/>
               </button>
             </Tippy>
 
             <Tippy content="Tin nhắn" placement='bottom'>
               <button className={cx('acction-btn')}>
-                <FontAwesomeIcon icon={faMessage} />
+                <MessageIcon/>
               </button>
             </Tippy>
           </>
@@ -172,10 +172,10 @@ function Header() {
               onChange = {handlemenuChange}
             >
               {currentUser ? (
-                <img src='https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/d95c70517212d1d9f87629f452a68870.jpeg?x-expires=1676019600&x-signature=%2BtJoazD9acFSxkh5G6l0LHidssM%3D'
+                <Image src='https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/7f21825ffcf04729c9103f2cbaaa91c8~c5_100x100.jpeg?x-expires=1676872800&x-signature=b0uhEB3Yw2Ci3yG7xV6584qz%2Fd0%3D'
                  className={cx('user-avatar')}
-                 alt="Nguyen Văn A"/>
-
+                 alt="Nguyen Văn A"
+                 />
               ) : (
 
                 <button className={cx('more-btn')}>
