@@ -34,6 +34,7 @@ function Menu({children, items=[], onChange = defaultFn }) {
         delay={[0, 500]}
         offset={[12, 8]}
         interactive
+        hideOnClick= {false}
         placement='bottom-end'
         render={(attrs) => (
           <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
