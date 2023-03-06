@@ -17,7 +17,7 @@ export const UploadIcon = ({ width = '3.2rem', height = '3.2rem', className }) =
 );
 export const MessageIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
   <svg
-    class={className}
+    className={className}
     width={width}
     height={height}
     data-e2e=""
@@ -35,7 +35,7 @@ export const MessageIcon = ({ width = '3.2rem', height = '3.2rem', className }) 
 
 export const SearchIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
   <svg
-    class={className}
+    className={className}
     width={width}
     height={height}
     viewBox="0 0 48 48"

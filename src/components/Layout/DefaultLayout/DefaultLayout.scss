@@ -5,10 +5,11 @@
 }
 .container{
   width: var(--default-layout-width);
+  padding: 0 var(--default-layout-horizontal-spacer);
   display: flex;
+  margin-top: var(--default-layout-header-hight);
 }
 .content{
   flex: 1;
   background-color: bisque;
-  padding: 0 var(--default-layout-horizontal-spacer);
 }
